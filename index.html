@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+<title>Vasanthrizz Luxury Estates | Premium Real Estate</title>
+<meta name="title" content="Vasanthrizz Luxury Estates | Premium Real Estate">
+<meta name="description" content="Explore premium villas, apartments, and commercial properties with Vasanthrizz Luxury Estates. Luxury redefined with trust and elegance.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vasanth-rizz-5.github.io/vasanthrizz-Luxury-estate/">
+<meta property="og:title" content="Vasanthrizz Luxury Estates | Premium Real Estate">
+<meta property="og:description" content="Explore premium villas, apartments, and commercial properties with Vasanthrizz Luxury Estates. Luxury redefined with trust and elegance.">
+<meta property="og:image" content="https://vasanth-rizz-5.github.io/vasanthrizz-Luxury-estate/"> <!-- Replace with actual image URL -->
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://vasanth-rizz-5.github.io/vasanthrizz-Luxury-estate/">
+<meta name="twitter:title" content="Vasanthrizz Luxury Estates | Premium Real Estate">
+<meta name="twitter:description" content="Explore premium villas, apartments, and commercial properties with Vasanthrizz Luxury Estates. Luxury redefined with trust and elegance.">
+<meta name="twitter:image" content="https://vasanth-rizz-5.github.io/vasanthrizz-Luxury-estate/"> <!-- Replace with actual image URL -->
+
+    <link rel="icon" type="image/png" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#c8a456',
+                        secondary: '#1a1a1a'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+        }
+        
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://readdy.ai/api/search-image?query=luxury%20modern%20mansion%20with%20infinity%20pool%20at%20sunset%2C%20stunning%20architecture%2C%20marble%20and%20glass%20facade%2C%20palm%20trees%2C%20ocean%20view%2C%20ultra%20high-end%20real%20estate%2C%20professional%20photography%2C%20cinematic%20lighting%2C%20ultra%20detailed%2C%208k%20resolution&width=1920&height=800&seq=hero1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .property-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .price-tag {
+            background-color: rgba(200, 164, 86, 0.9);
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #c8a456;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        input[type="range"]::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            background: #c8a456;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .custom-checkbox {
+            display: none;
+        }
+        
+        .checkbox-label {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+        
+        .checkbox-label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #c8a456;
+            border-radius: 4px;
+            background-color: white;
+        }
+        
+        .custom-checkbox:checked + .checkbox-label:before {
+            background-color: #c8a456;
+        }
+        
+        .custom-checkbox:checked + .checkbox-label:after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 3px;
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: #c8a456;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .active-testimonial {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .inactive-testimonial {
+            transform: scale(0.85);
+            opacity: 0.5;
+        }
+        
+        .search-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        
+        .search-dropdown.show {
+            display: block;
+        }
+        
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            z-index: 10;
+        }
+        
+        .language-dropdown.show {
+            display: block;
+        }
+        
+        .map-container {
+            background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="#" class="text-3xl font-['Pacifico'] text-primary mr-10">Vasanthrizz</a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">Properties</a>
+                    <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">About</a>
+                    <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">Contact</a>
+                </nav>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <button id="searchToggle" class="w-10 h-10 flex items-center justify-center text-secondary hover:text-primary transition-colors">
+                        <i class="ri-search-line text-xl"></i>
+                    </button>
+                    <div id="searchDropdown" class="search-dropdown bg-white shadow-lg rounded p-4 w-72">
+                        <div class="mb-3">
+                            <input type="text" placeholder="Search properties..." class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+                        </div>
+                        <div class="mb-3">
+                            <label class="block text-sm font-medium mb-1">Price Range</label>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm">$500K</span>
+                                <span class="text-sm">$10M+</span>
+                            </div>
+                            <input type="range" min="500000" max="10000000" step="100000" value="2000000" class="w-full h-2 bg-gray-200 rounded appearance-none">
+                        </div>
+                        <div class="mb-3">
+                            <label class="block text-sm font-medium mb-1">Location</label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary pr-8">
+                                <option>All Locations</option>
+                                <option>Beverly Hills</option>
+                                <option>Malibu</option>
+                                <option>Miami Beach</option>
+                                <option>The Hamptons</option>
+                            </select>
+                        </div>
+                        <button class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Search</button>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <button id="languageToggle" class="flex items-center space-x-1 text-secondary hover:text-primary transition-colors">
+                        <i class="ri-global-line"></i>
+                        <span class="hidden md:inline">EN</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div id="languageDropdown" class="language-dropdown bg-white shadow-lg rounded py-2 w-32">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm">English</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm">Français</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm">Español</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm">中文</a>
+                    </div>
+                </div>
+                
+                <a href="sign-in.html" class="hidden md:flex items-center space-x-1 text-secondary hover:text-primary transition-colors">
+                    <i class="ri-user-line"></i>
+                    <span>Sign In</span>
+                </a>
+                  <a href="sign-in.html">
+                <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap hidden md:block">
+                    Register
+                </button></a>
+                
+                <button id="mobileMenuToggle" class="w-10 h-10 flex items-center justify-center md:hidden">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden bg-white md:hidden">
+            <nav class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
+                <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">Properties</a>
+                <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">About</a>
+                <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">Contact</a>
+                <a href="sign-in.html" class="text-secondary hover:text-primary font-medium transition-colors">Sign In</a>
+                <a href="sign-in.html"> <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap w-full">
+                    Register
+                </button></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-screen flex items-center justify-center mt-16">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Discover Your Dream Luxury Home</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Exclusive properties for those who demand excellence in every detail</p>
+            
+            <div class="bg-white bg-opacity-90 p-6 rounded-lg max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Location</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary text-gray-700 pr-8">
+                            <option>Any Location</option>
+                            <option>Beverly Hills</option>
+                            <option>Malibu</option>
+                            <option>Miami Beach</option>
+                            <option>The Hamptons</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Property Type</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary text-gray-700 pr-8">
+                            <option>Any Type</option>
+                            <option>Mansion</option>
+                            <option>Penthouse</option>
+                            <option>Villa</option>
+                            <option>Estate</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Bedrooms</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary text-gray-700 pr-8">
+                            <option>Any</option>
+                            <option>2+</option>
+                            <option>3+</option>
+                            <option>4+</option>
+                            <option>5+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Price Range</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary text-gray-700 pr-8">
+                            <option>Any Price</option>
+                            <option>$1M - $3M</option>
+                            <option>$3M - $5M</option>
+                            <option>$5M - $10M</option>
+                            <option>$10M+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <button class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap flex-1">
+                        <i class="ri-search-line mr-2"></i> Search Properties
+                    </button>
+                    <button class="bg-secondary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap flex items-center justify-center">
+                        <i class="ri-vr-glasses-line mr-2"></i> Virtual Tours
+                    </button>
+                    <button class="bg-white text-secondary border border-secondary px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap flex items-center justify-center">
+                        <i class="ri-360-view-line mr-2"></i> 360° View
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-secondary">Featured Properties</h2>
+                    <p class="text-gray-600 mt-2">Discover our handpicked selection of exceptional properties</p>
+                </div>
+                <div class="flex space-x-2">
+                    <button id="compareBtn" class="flex items-center space-x-2 text-primary hover:text-primary-dark transition-colors">
+                        <i class="ri-scales-line"></i>
+                        <span class="hidden md:inline">Compare</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20modern%20mansion%20with%20infinity%20pool%2C%20stunning%20architecture%2C%20marble%20and%20glass%20facade%2C%20palm%20trees%2C%20ocean%20view%2C%20ultra%20high-end%20real%20estate%2C%20professional%20photography%2C%20cinematic%20lighting%2C%20ultra%20detailed%2C%208k%20resolution&width=600&height=400&seq=prop1&orientation=landscape" alt="Luxury Villa" class="w-full h-64 object-cover object-top">
+                        <div class="absolute top-4 right-4 flex space-x-2">
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                <i class="ri-heart-line"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                <i class="ri-scales-line"></i>
+                            </button>
+                        </div>
+                        <div class="price-tag absolute bottom-4 left-4 px-4 py-2 rounded text-white font-bold">
+                            $8,950,000
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Oceanfront Paradise</h3>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="ri-map-pin-line mr-2"></i> Malibu, California
+                        </p>
+                        <div class="flex justify-between mb-6">
+                            <div class="flex items-center">
+                                <i class="ri-home-4-line mr-1"></i>
+                                <span>8,500 sq ft</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-hotel-bed-line mr-1"></i>
+                                <span>6 beds</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-shower-line mr-1"></i>
+                                <span>8 baths</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20female%20real%20estate%20agent%20with%20blonde%20hair%2C%20business%20attire%2C%20neutral%20background%2C%20professional%20lighting%2C%208k&width=40&height=40&seq=agent1&orientation=squarish" alt="Agent" class="w-10 h-10 rounded-full object-cover mr-2">
+                                <span class="text-sm">Victoria Reynolds</span>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20penthouse%20with%20city%20skyline%20view%2C%20modern%20interior%2C%20floor%20to%20ceiling%20windows%2C%20marble%20floors%2C%20designer%20furniture%2C%20professional%20real%20estate%20photography%2C%20cinematic%20lighting%2C%20ultra%20detailed%2C%208k%20resolution&width=600&height=400&seq=prop2&orientation=landscape" alt="Luxury Penthouse" class="w-full h-64 object-cover object-top">
+                        <div class="absolute top-4 right-4 flex space-x-2">
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                <i class="ri-heart-line"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                <i class="ri-scales-line"></i>
+                            </button>
+                        </div>
+                        <div class="price-tag absolute bottom-4 left-4 px-4 py-2 rounded text-white font-bold">
+                            $12,500,000
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Skyline Penthouse</h3>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="ri-map-pin-line mr-2"></i> Manhattan, New York
+                        </p>
+                        <div class="flex justify-between mb-6">
+                            <div class="flex items-center">
+                                <i class="ri-home-4-line mr-1"></i>
+                                <span>6,200 sq ft</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-hotel-bed-line mr-1"></i>
+                                <span>4 beds</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-shower-line mr-1"></i>
+                                <span>5 baths</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20male%20real%20estate%20agent%20with%20dark%20hair%2C%20business%20suit%2C%20neutral%20background%2C%20professional%20lighting%2C%208k&width=40&height=40&seq=agent2&orientation=squarish" alt="Agent" class="w-10 h-10 rounded-full object-cover mr-2">
+                                <span class="text-sm">Jonathan Blake</span>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20mediterranean%20villa%20with%20private%20garden%2C%20swimming%20pool%2C%20elegant%20architecture%2C%20terracotta%20roof%2C%20stone%20walls%2C%20olive%20trees%2C%20professional%20real%20estate%20photography%2C%20cinematic%20lighting%2C%20ultra%20detailed%2C%208k%20resolution&width=600&height=400&seq=prop3&orientation=landscape" alt="Mediterranean Villa" class="w-full h-64 object-cover object-top">
+                        <div class="absolute top-4 right-4 flex space-x-2">
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                <i class="ri-heart-line"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                <i class="ri-scales-line"></i>
+                            </button>
+                        </div>
+                        <div class="price-tag absolute bottom-4 left-4 px-4 py-2 rounded text-white font-bold">
+                            $5,750,000
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mediterranean Villa</h3>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="ri-map-pin-line mr-2"></i> Tuscany, Italy
+                        </p>
+                        <div class="flex justify-between mb-6">
+                            <div class="flex items-center">
+                                <i class="ri-home-4-line mr-1"></i>
+                                <span>7,800 sq ft</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-hotel-bed-line mr-1"></i>
+                                <span>5 beds</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-shower-line mr-1"></i>
+                                <span>6 baths</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20female%20real%20estate%20agent%20with%20dark%20hair%2C%20business%20attire%2C%20neutral%20background%2C%20professional%20lighting%2C%208k&width=40&height=40&seq=agent3&orientation=squarish" alt="Agent" class="w-10 h-10 rounded-full object-cover mr-2">
+                                <span class="text-sm">Sophia Rossi</span>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+                    View All Properties
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary">Why Choose Us</h2>
+                <p class="text-gray-600 mt-2 max-w-2xl mx-auto">We provide unparalleled service and expertise in the luxury real estate market</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-award-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Exclusive Listings</h3>
+                    <p class="text-gray-600">Access to the most prestigious properties that are often not available on the open market.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-shield-check-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Advisors</h3>
+                    <p class="text-gray-600">Our team of experienced professionals provides personalized guidance throughout your journey.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-global-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Global Network</h3>
+                    <p class="text-gray-600">With connections in over 70 countries, we can help you find your dream home anywhere in the world.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">25+</div>
+                    <p class="text-gray-600">Years of Experience</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">1,200+</div>
+                    <p class="text-gray-600">Properties Sold</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">950+</div>
+                    <p class="text-gray-600">Happy Clients</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">42</div>
+                    <p class="text-gray-600">Industry Awards</p>
+                </div>
+            </div>
+            
+            <!-- Testimonials Section -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-secondary text-center mb-8">What Our Clients Say</h3>
+                
+                <div class="relative">
+                    <div id="testimonialSlider" class="flex overflow-hidden">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card active-testimonial min-w-full md:min-w-[33.333%] px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20middle-aged%20businessman%20in%20suit%2C%20neutral%20background%2C%20professional%20lighting%2C%208k&width=60&height=60&seq=client1&orientation=squarish" alt="Client" class="w-12 h-12 rounded-full object-cover mr-3">
+                                    <div>
+                                        <h4 class="font-bold">Richard Thompson</h4>
+                                        <p class="text-sm text-gray-600">CEO, Global Ventures</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">"The level of service we received was exceptional. They understood exactly what we were looking for and found us the perfect property within our timeframe."</p>
+                                <div class="flex text-primary mt-4">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card inactive-testimonial min-w-full md:min-w-[33.333%] px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20woman%20in%20her%2040s%2C%20business%20casual%2C%20neutral%20background%2C%20professional%20lighting%2C%208k&width=60&height=60&seq=client2&orientation=squarish" alt="Client" class="w-12 h-12 rounded-full object-cover mr-3">
+                                    <div>
+                                        <h4 class="font-bold">Jennifer Lawson</h4>
+                                        <p class="text-sm text-gray-600">Interior Designer</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">"Their attention to detail and knowledge of the luxury market is unmatched. They made the entire process seamless and enjoyable."</p>
+                                <div class="flex text-primary mt-4">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card inactive-testimonial min-w-full md:min-w-[33.333%] px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20senior%20executive%20man%20with%20gray%20hair%2C%20business%20attire%2C%20neutral%20background%2C%20professional%20lighting%2C%208k&width=60&height=60&seq=client3&orientation=squarish" alt="Client" class="w-12 h-12 rounded-full object-cover mr-3">
+                                    <div>
+                                        <h4 class="font-bold">Michael Chen</h4>
+                                        <p class="text-sm text-gray-600">Tech Entrepreneur</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">"As an international buyer, I appreciated their expertise in navigating complex transactions. They found me an incredible property that exceeded my expectations."</p>
+                                <div class="flex text-primary mt-4">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="prevTestimonial" class="absolute top-1/2 left-0 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </button>
+                    
+                    <button id="nextTestimonial" class="absolute top-1/2 right-0 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Video Testimonial -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-secondary text-center mb-6">Video Testimonials</h3>
+                <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20home%20interior%20with%20a%20couple%20discussing%20with%20a%20real%20estate%20agent%2C%20elegant%20living%20room%2C%20large%20windows%2C%20professional%20lighting%2C%20cinematic%20style%2C%208k%20resolution&width=800&height=450&seq=videothumb&orientation=landscape" alt="Video Thumbnail" class="w-full h-full object-cover">
+                        <button class="absolute w-20 h-20 bg-primary bg-opacity-80 rounded-full flex items-center justify-center text-white hover:bg-opacity-100 transition-colors">
+                            <i class="ri-play-fill text-3xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Properties Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-secondary">Latest Properties</h2>
+                    <p class="text-gray-600 mt-2">Explore our newest additions to the market</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button id="prevLatest" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </button>
+                    <button id="nextLatest" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="relative overflow-hidden">
+                <div id="latestPropertiesSlider" class="flex transition-transform duration-300 ease-in-out">
+                    <!-- Property 1 -->
+                    <div class="min-w-full md:min-w-[33.333%] px-4">
+                        <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=luxury%20beachfront%20property%20with%20private%20beach%20access%2C%20modern%20architecture%2C%20glass%20walls%2C%20infinity%20pool%2C%20palm%20trees%2C%20professional%20real%20estate%20photography%2C%20cinematic%20lighting%2C%20ultra%20detailed%2C%208k%20resolution&width=600&height=400&seq=latest1&orientation=landscape" alt="Beachfront Property" class="w-full h-64 object-cover object-top">
+                                <div class="absolute top-4 right-4 flex space-x-2">
+                                    <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                        <i class="ri-heart-line"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag absolute bottom-4 left-4 px-4 py-2 rounded text-white font-bold">
+                                    $7,200,000
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Beachfront Paradise</h3>
+                                <p class="text-gray-600 mb-4 flex items-center">
+                                    <i class="ri-map-pin-line mr-2"></i> Miami Beach, Florida
+                                </p>
+                                <div class="flex justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <i class="ri-home-4-line mr-1"></i>
+                                        <span>6,800 sq ft</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="ri-hotel-bed-line mr-1"></i>
+                                        <span>5 beds</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="ri-shower-line mr-1"></i>
+                                        <span>7 baths</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <button class="text-primary hover:underline whitespace-nowrap">
+                                        Contact Agent
+                                    </button>
+                                    <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property 2 -->
+                    <div class="min-w-full md:min-w-[33.333%] px-4">
+                        <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=luxury%20mountain%20retreat%20with%20panoramic%20views%2C%20stone%20and%20wood%20architecture%2C%20large%20windows%2C%20fireplace%2C%20snow-capped%20mountains%2C%20professional%20real%20estate%20photography%2C%20cinematic%20lighting%2C%20ultra%20detailed%2C%208k%20resolution&width=600&height=400&seq=latest2&orientation=landscape" alt="Mountain Retreat" class="w-full h-64 object-cover object-top">
+                                <div class="absolute top-4 right-4 flex space-x-2">
+                                    <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                        <i class="ri-heart-line"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag absolute bottom-4 left-4 px-4 py-2 rounded text-white font-bold">
+                                    $4,850,000
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Mountain Retreat</h3>
+                                <p class="text-gray-600 mb-4 flex items-center">
+                                    <i class="ri-map-pin-line mr-2"></i> Aspen, Colorado
+                                </p>
+                                <div class="flex justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <i class="ri-home-4-line mr-1"></i>
+                                        <span>5,200 sq ft</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="ri-hotel-bed-line mr-1"></i>
+                                        <span>4 beds</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="ri-shower-line mr-1"></i>
+                                        <span>5 baths</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <button class="text-primary hover:underline whitespace-nowrap">
+                                        Contact Agent
+                                    </button>
+                                    <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property 3 -->
+                    <div class="min-w-full md:min-w-[33.333%] px-4">
+                        <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=luxury%20vineyard%20estate%20in%20wine%20country%2C%20elegant%20mansion%2C%20sprawling%20vineyards%2C%20terrace%20with%20views%2C%20wine%20cellar%2C%20professional%20real%20estate%20photography%2C%20cinematic%20lighting%2C%20ultra%20detailed%2C%208k%20resolution&width=600&height=400&seq=latest3&orientation=landscape" alt="Vineyard Estate" class="w-full h-64 object-cover object-top">
+                                <div class="absolute top-4 right-4 flex space-x-2">
+                                    <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                        <i class="ri-heart-line"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag absolute bottom-4 left-4 px-4 py-2 rounded text-white font-bold">
+                                    $9,300,000
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Vineyard Estate</h3>
+                                <p class="text-gray-600 mb-4 flex items-center">
+                                    <i class="ri-map-pin-line mr-2"></i> Napa Valley, California
+                                </p>
+                                <div class="flex justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <i class="ri-home-4-line mr-1"></i>
+                                        <span>8,900 sq ft</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="ri-hotel-bed-line mr-1"></i>
+                                        <span>6 beds</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="ri-shower-line mr-1"></i>
+                                        <span>8 baths</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <button class="text-primary hover:underline whitespace-nowrap">
+                                        Contact Agent
+                                    </button>
+                                    <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property 4 -->
+                    <div class="min-w-full md:min-w-[33.333%] px-4">
+                        <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                            <div class="relative">
+                                <img src="https://readdy.ai/api/search-image?query=luxury%20waterfront%20mansion%20with%20private%20dock%2C%20yacht%2C%20modern%20architecture%2C%20infinity%20pool%2C%20landscaped%20gardens%2C%20professional%20real%20estate%20photography%2C%20cinematic%20lighting%2C%20ultra%20detailed%2C%208k%20resolution&width=600&height=400&seq=latest4&orientation=landscape" alt="Waterfront Mansion" class="w-full h-64 object-cover object-top">
+                                <div class="absolute top-4 right-4 flex space-x-2">
+                                    <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                                        <i class="ri-heart-line"></i>
+                                    </button>
+                                </div>
+                                <div class="price-tag absolute bottom-4 left-4 px-4 py-2 rounded text-white font-bold">
+                                    $14,500,000
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Waterfront Mansion</h3>
+                                <p class="text-gray-600 mb-4 flex items-center">
+                                    <i class="ri-map-pin-line mr-2"></i> Palm Beach, Florida
+                                </p>
+                                <div class="flex justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <i class="ri-home-4-line mr-1"></i>
+                                        <span>10,500 sq ft</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="ri-hotel-bed-line mr-1"></i>
+                                        <span>7 beds</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="ri-shower-line mr-1"></i>
+                                        <span>9 baths</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <button class="text-primary hover:underline whitespace-nowrap">
+                                        Contact Agent
+                                    </button>
+                                    <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mortgage Calculator -->
+            <div class="bg-white p-8 rounded-lg shadow-md mt-16">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2 md:pr-8">
+                        <h3 class="text-2xl font-bold text-secondary mb-6">Mortgage Calculator</h3>
+                        <p class="text-gray-600 mb-6">Estimate your monthly payments and see how much house you can afford.</p>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Home Price</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
+                                <input type="text" id="homePrice" value="1,000,000" class="w-full pl-8 pr-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Down Payment</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
+                                <input type="text" id="downPayment" value="200,000" class="w-full pl-8 pr-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Loan Term</label>
+                            <select id="loanTerm" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary pr-8">
+                                <option value="30">30 Years</option>
+                                <option value="20">20 Years</option>
+                                <option value="15">15 Years</option>
+                                <option value="10">10 Years</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Interest Rate</label>
+                            <div class="relative">
+                                <input type="text" id="interestRate" value="4.5" class="w-full pl-3 pr-8 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+                                <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">%</span>
+                            </div>
+                        </div>
+                        
+                        <button id="calculateMortgage" class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            Calculate
+                        </button>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0">
+                        <div class="bg-gray-50 p-6 rounded-lg h-full flex flex-col justify-center">
+                            <h4 class="text-xl font-bold text-secondary mb-6 text-center">Your Estimated Monthly Payment</h4>
+                            
+                            <div class="text-center mb-8">
+                                <div class="text-4xl font-bold text-primary mb-2">$4,026</div>
+                                <p class="text-gray-600">Principal & Interest</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-white p-4 rounded shadow-sm">
+                                    <div class="text-lg font-bold text-secondary mb-1">$800</div>
+                                    <p class="text-sm text-gray-600">Property Taxes</p>
+                                </div>
+                                <div class="bg-white p-4 rounded shadow-sm">
+                                    <div class="text-lg font-bold text-secondary mb-1">$250</div>
+                                    <p class="text-sm text-gray-600">Home Insurance</p>
+                                </div>
+                            </div>
+                            
+                            <div class="border-t border-gray-200 pt-6">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-700">Total Monthly Payment:</span>
+                                    <span class="text-xl font-bold text-secondary">$5,076</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-700">Loan Amount:</span>
+                                    <span class="font-medium">$800,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary">Contact Us</h2>
+                <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Reach out to our team of luxury real estate specialists</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="w-full md:w-1/2 p-8">
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Send Us a Message</h3>
+                    
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                            <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Interest</label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary pr-8">
+                                <option>Buying a property</option>
+                                <option>Selling a property</option>
+                                <option>Property valuation</option>
+                                <option>Investment advice</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary"></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="custom-checkbox" id="privacyConsent">
+                                <span class="checkbox-label">I agree to the privacy policy and terms of service</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <div class="h-64 md:h-full rounded-xl overflow-hidden shadow-md">
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15800.59051544129!2d77.53557067642087!3d8.086423115576707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ed3d2a087861%3A0x1e790e896aeffaa0!2sKanniyakumari%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1751788861901!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full h-full"
+                      ></iframe>
+                    </div>
+                  </div>
+                  
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-map-pin-line text-xl text-primary"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Our Office</h4>
+                    <p class="text-gray-600">1234 kanyakumari<br>Beverly Hills, India</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-phone-line text-xl text-primary"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Phone</h4>
+                    <p class="text-gray-600">+91 9876543210<br>+91 1234567890</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-mail-line text-xl text-primary"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Email</h4>
+                    <p class="text-gray-600">vasanthrizz@luxuryestates.com<br>rizz@luxuryestates.com</p>
+                </div>
+            </div>
+            
+            <!-- Schedule Viewing -->
+            <div class="bg-white p-8 rounded-lg shadow-md mt-12">
+                <h3 class="text-2xl font-bold text-secondary mb-6 text-center">Schedule a Viewing</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Select Property</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary pr-8">
+                            <option>Oceanfront Paradise - Malibu</option>
+                            <option>Skyline Penthouse - Manhattan</option>
+                            <option>Mediterranean Villa - Tuscany</option>
+                            <option>Beachfront Paradise - Miami Beach</option>
+                            <option>Mountain Retreat - Aspen</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                        <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary pr-8">
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-6">
+                    <button class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                        Schedule Viewing
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Live Chat Widget -->
+    <div id="chatWidget" class="fixed bottom-6 right-6 z-50">
+        <div id="chatBox" class="hidden bg-white rounded-lg shadow-lg w-80 overflow-hidden">
+            <div class="bg-primary p-4 text-white flex justify-between items-center">
+                <h4 class="font-bold">Live Chat Support</h4>
+                <button id="closeChatBtn" class="text-white hover:text-gray-200">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="h-80 p-4 overflow-y-auto bg-gray-50" id="chatMessages">
+                <div class="flex mb-4">
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-2">
+                        <i class="ri-customer-service-2-line"></i>
+                    </div>
+                    <div class="bg-gray-200 rounded-lg p-3 max-w-[80%]">
+                        <p class="text-sm">Hello! How can I help you today with your Vasanthrizz luxury property search?</p>
+                        <span class="text-xs text-gray-500 mt-1 block">10:30 AM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border-t">
+                <div class="flex">
+                    <input type="text" id="chatInput" placeholder="Type your message..." class="flex-1 px-3 py-2 border border-gray-300 rounded-l focus:outline-none focus:border-primary">
+                    <button id="sendChatBtn" class="bg-primary text-white px-4 py-2 rounded-r hover:bg-opacity-90 transition-colors">
+                        <i class="ri-send-plane-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <button id="openChatBtn" class="w-16 h-16 bg-primary rounded-full text-white shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-colors">
+            <i class="ri-message-3-line text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white pt-16 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="text-3xl font-['Pacifico'] text-primary mb-6 block">Vasanthrizz</a>
+                    <p class="text-gray-400 mb-6">Providing exceptional luxury real estate services since 2000. Your trusted partner in finding extraordinary properties worldwide.</p>
+                    <div class="flex space-x-4">
+                        <a href="http://vasanthrizz.blogspot.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                            <i class="ri-blogger-fill"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/vasanthrizz5" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                            <i class="ri-pinterest-line"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@vasanthrizzai" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                        <a href="mailto:rkvasanthdeveloper@email.com" title="Email" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                            <i class="ri-mail-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Properties</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Property Alerts</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to receive notifications about new properties that match your criteria.</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" placeholder="Your email address" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-500 focus:outline-none focus:border-primary">
+                        </div>
+                        <div class="mb-3">
+                            <select class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:border-primary pr-8">
+                                <option>All Property Types</option>
+                                <option>Mansions</option>
+                                <option>Penthouses</option>
+                                <option>Villas</option>
+                                <option>Estates</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Market Updates</h4>
+                    <div class="space-y-4">
+                        <a href="#" class="block group">
+                            <h5 class="font-medium group-hover:text-primary transition-colors">Luxury Market Trends 2025</h5>
+                            <p class="text-gray-400 text-sm">May 27, 2025</p>
+                        </a>
+                        <a href="#" class="block group">
+                            <h5 class="font-medium group-hover:text-primary transition-colors">Investment Opportunities in Emerging Markets</h5>
+                            <p class="text-gray-400 text-sm">May 20, 2025</p>
+                        </a>
+                        <a href="#" class="block group">
+                            <h5 class="font-medium group-hover:text-primary transition-colors">Sustainable Luxury: The New Standard</h5>
+                            <p class="text-gray-400 text-sm">May 15, 2025</p>
+                        </a>
+                    </div>
+                    <a href="#" class="text-primary hover:underline mt-4 inline-block">View All Articles</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 pb-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 <a href="https://vasanth-rizz-5.github.io/vasanthrizz-official/">Vasanthrizz</a> Luxury Estates. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <div class="flex items-center text-gray-400">
+                            <i class="ri-visa-fill text-2xl mr-2"></i>
+                            <i class="ri-mastercard-fill text-2xl mr-2"></i>
+                            <i class="ri-paypal-fill text-2xl mr-2"></i>
+                            <i class="ri-american-express-fill text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="fixed bottom-6 right-24 w-12 h-12 bg-primary rounded-full text-white shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-colors opacity-0 invisible">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script id="headerInteractions">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Search Dropdown Toggle
+            const searchToggle = document.getElementById('searchToggle');
+            const searchDropdown = document.getElementById('searchDropdown');
+            
+            searchToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                searchDropdown.classList.toggle('show');
+                languageDropdown.classList.remove('show');
+            });
+            
+            // Language Dropdown Toggle
+            const languageToggle = document.getElementById('languageToggle');
+            const languageDropdown = document.getElementById('languageDropdown');
+            
+            languageToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('show');
+                searchDropdown.classList.remove('show');
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function() {
+                searchDropdown.classList.remove('show');
+                languageDropdown.classList.remove('show');
+            });
+            
+            // Prevent dropdown close when clicking inside
+            searchDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            languageDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+    
+    <script id="sliderInteractions">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Testimonial Slider
+            const testimonialSlider = document.getElementById('testimonialSlider');
+            const testimonials = testimonialSlider.querySelectorAll('.testimonial-card');
+            const prevTestimonialBtn = document.getElementById('prevTestimonial');
+            const nextTestimonialBtn = document.getElementById('nextTestimonial');
+            let currentTestimonial = 0;
+            
+            function showTestimonial(index) {
+                testimonials.forEach((testimonial, i) => {
+                    testimonial.classList.remove('active-testimonial', 'inactive-testimonial');
+                    testimonial.classList.add(i === index ? 'active-testimonial' : 'inactive-testimonial');
+                });
+                
+                // For mobile, scroll to the active testimonial
+                if (window.innerWidth < 768) {
+                    const offset = testimonials[index].offsetLeft - testimonialSlider.offsetLeft;
+                    testimonialSlider.scrollTo({
+                        left: offset,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            
+            prevTestimonialBtn.addEventListener('click', function() {
+                currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+                showTestimonial(currentTestimonial);
+            });
+            
+            nextTestimonialBtn.addEventListener('click', function() {
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                showTestimonial(currentTestimonial);
+            });
+            
+            // Initialize testimonial slider
+            showTestimonial(currentTestimonial);
+            
+            // Latest Properties Slider
+            const latestPropertiesSlider = document.getElementById('latestPropertiesSlider');
+            const latestProperties = latestPropertiesSlider.children;
+            const prevLatestBtn = document.getElementById('prevLatest');
+            const nextLatestBtn = document.getElementById('nextLatest');
+            let currentLatestProperty = 0;
+            let slideWidth = 100;
+            
+            function updateSlideWidth() {
+                if (window.innerWidth >= 768) {
+                    slideWidth = 33.333;
+                } else {
+                    slideWidth = 100;
+                }
+            }
+            
+            function showLatestProperty(index) {
+                latestPropertiesSlider.style.transform = `translateX(-${index * slideWidth}%)`;
+            }
+            
+            prevLatestBtn.addEventListener('click', function() {
+                if (currentLatestProperty > 0) {
+                    currentLatestProperty--;
+                    showLatestProperty(currentLatestProperty);
+                }
+            });
+            
+            nextLatestBtn.addEventListener('click', function() {
+                if (currentLatestProperty < latestProperties.length - (window.innerWidth >= 768 ? 3 : 1)) {
+                    currentLatestProperty++;
+                    showLatestProperty(currentLatestProperty);
+                }
+            });
+            
+            // Initialize latest properties slider
+            updateSlideWidth();
+            window.addEventListener('resize', updateSlideWidth);
+        });
+    </script>
+    
+    <script id="chatAndScrollInteractions">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Live Chat Widget
+            const openChatBtn = document.getElementById('openChatBtn');
+            const closeChatBtn = document.getElementById('closeChatBtn');
+            const chatBox = document.getElementById('chatBox');
+            const chatInput = document.getElementById('chatInput');
+            const sendChatBtn = document.getElementById('sendChatBtn');
+            const chatMessages = document.getElementById('chatMessages');
+            
+            openChatBtn.addEventListener('click', function() {
+                chatBox.classList.remove('hidden');
+                openChatBtn.classList.add('hidden');
+            });
+            
+            closeChatBtn.addEventListener('click', function() {
+                chatBox.classList.add('hidden');
+                openChatBtn.classList.remove('hidden');
+            });
+            
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    
+                    // Add user message
+                    const userMessageHTML = `
+                        <div class="flex justify-end mb-4">
+                            <div class="bg-primary text-white rounded-lg p-3 max-w-[80%]">
+                                <p class="text-sm">${message}</p>
+                                <span class="text-xs text-white text-opacity-70 mt-1 block">${time}</span>
+                            </div>
+                        </div>
+                    `;
+                    chatMessages.insertAdjacentHTML('beforeend', userMessageHTML);
+                    
+                    // Clear input
+                    chatInput.value = '';
+                    
+                    // Scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                    
+                    // Simulate agent response after 1 second
+                    setTimeout(function() {
+                        const responses = [
+                            "Thank you for your message! One of our luxury property specialists will be with you shortly.",
+                            "I'd be happy to help you find your dream luxury home. Could you tell me more about what you're looking for?",
+                            "We have several exclusive properties that might interest you. Would you like to schedule a virtual tour?",
+                            "Thank you for reaching out. Our team specializes in high-end properties in this area. How can we assist you today?"
+                        ];
+                        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                        
+                        const agentMessageHTML = `
+                            <div class="flex mb-4">
+                                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-2">
+                                    <i class="ri-customer-service-2-line"></i>
+                                </div>
+                                <div class="bg-gray-200 rounded-lg p-3 max-w-[80%]">
+                                    <p class="text-sm">${randomResponse}</p>
+                                    <span class="text-xs text-gray-500 mt-1 block">${time}</span>
+                                </div>
+                            </div>
+                        `;
+                        chatMessages.insertAdjacentHTML('beforeend', agentMessageHTML);
+                        
+                        // Scroll to bottom
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                    }, 1000);
+                }
+            }
+            
+            sendChatBtn.addEventListener('click', sendMessage);
+            
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+    <script id="calculatorInteractions">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mortgage Calculator
+            const homePriceInput = document.getElementById('homePrice');
+            const downPaymentInput = document.getElementById('downPayment');
+            const interestRateInput = document.getElementById('interestRate');
+            const calculateMortgageBtn = document.getElementById('calculateMortgage');
+            
+            // Format currency inputs
+            function formatCurrency(input) {
+                let value = input.value.replace(/[^\d]/g, '');
+                if (value) {
+                    value = parseInt(value).toLocaleString('en-US');
+                    input.value = value;
+                }
+            }
+            
+            homePriceInput.addEventListener('blur', function() {
+                formatCurrency(this);
+            });
+            
+            downPaymentInput.addEventListener('blur', function() {
+                formatCurrency(this);
+            });
+            
+            calculateMortgageBtn.addEventListener('click', function() {
+                // This is a simplified calculation for demonstration
+                const homePrice = parseInt(homePriceInput.value.replace(/[^\d]/g, ''));
+                const downPayment = parseInt(downPaymentInput.value.replace(/[^\d]/g, ''));
+                const interestRate = parseFloat(interestRateInput.value);
+                const loanTerm = parseInt(document.getElementById('loanTerm').value);
+                
+                const loanAmount = homePrice - downPayment;
+                const monthlyInterest = interestRate / 100 / 12;
+                const totalPayments = loanTerm * 12;
+                
+                // Monthly payment formula: P = L[c(1 + c)^n]/[(1 + c)^n - 1]
+                // Where P = payment, L = loan amount, c = monthly interest rate, n = total number of payments
+                const monthlyPayment = loanAmount * (monthlyInterest * Math.pow(1 + monthlyInterest, totalPayments)) / (Math.pow(1 + monthlyInterest, totalPayments) - 1);
+                
+                alert(`Estimated Monthly Payment: $${monthlyPayment.toFixed(2)}\nLoan Amount: $${loanAmount.toLocaleString('en-US')}`);
+            });
+            
+            // Form validation for custom checkbox
+            const privacyConsent = document.getElementById('privacyConsent');
+            const contactForm = privacyConsent?.closest('form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    if (!privacyConsent.checked) {
+                        alert('Please agree to the privacy policy and terms of service.');
+                        return;
+                    }
+                    
+                    alert('Thank you for your message! We will get back to you shortly.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
